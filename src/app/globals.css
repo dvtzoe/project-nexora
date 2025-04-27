@@ -1,26 +1,77 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  --font-sans: "Noto Sans", sans-serif;
+  --font-mono: "Noto Sans Mono", monospace;
+  --font-serif: "Noto Serif", serif;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --dark-bg-primary: #0d1117;
+  --dark-bg-secondary: #010409;
+  --dark-fg-primary: #e6edf3;
+  --dark-fg-secondary: #7d8590;
+  --dark-fg-tertiary: #ffffff;
+  --dark-neutral: #30363d;
+  --dark-accent: #1f6feb;
+  --dark-button: #238636;
+  --dark-button-hover: #2EA043;
 
+  --light-bg-primary: #ffffff;
+  --light-bg-secondary: #f6f8fa;
+  --light-fg-primary: #1f2328;
+  --light-fg-secondary: #656d76;
+  --light-fg-tertiary: #000000;
+  --light-neutral: #d0d7de;
+  --light-accent: #0969da;
+  --light-button: #1F883D;
+  --light-button-hover: #1A7F37;
+}
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --bg-primary: var(--dark-bg-primary);
+    --bg-secondary: var(--dark-bg-secondary);
+    --fg-primary: var(--dark-fg-primary);
+    --fg-secondary: var(--dark-fg-secondary);
+    --fg-tertiary: var(--dark-fg-tertiary);
+    --neutral: var(--dark-neutral);
+    --accent: var(--dark-accent);
+    --button: var(--dark-button);
+    --button-hover: var(--dark-button-hover);
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-primary: var(--light-bg-primary);
+    --bg-secondary: var(--light-bg-secondary);
+    --fg-primary: var(--light-fg-primary);
+    --fg-secondary: var(--light-fg-secondary);
+    --fg-tertiary: var(--light-fg-tertiary);
+    --neutral: var(--light-neutral);
+    --accent: var(--light-accent);
+    --button: var(--light-button);
+    --button-hover: var(--light-button-hover);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@theme {
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+  --font-serif: var(--font-serif);
+
+  --color-bg-primary: var(--bg-primary);
+  --color-bg-secondary: var(--bg-secondary);
+  --color-fg-primary: var(--fg-primary);
+  --color-fg-secondary: var(--fg-secondary);
+  --color-fg-tertiary: var(--fg-tertiary);
+  --color-neutral: var(--neutral);
+  --color-accent: var(--accent);
+  --color-button: var(--button);
+  --color-button-hover: var(--button-hover);
+}
+
+@layer base {
+  html {
+    background-color: var(--bg-primary);
+    color: var(--fg-primary);
+    font-family: var(--font-sans);
+  }
 }
