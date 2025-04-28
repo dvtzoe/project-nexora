@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import { Noto_Sans, Noto_Sans_Mono } from "next/font/google";
 import "./globals.css";
 
-import Sidebar from "@/components/sidebar";
-
 const notoSans = Noto_Sans({
   variable: "--font-noto-sans",
   subsets: ["latin"],
@@ -29,10 +27,7 @@ export default function RootLayout({
       <body
         className={`${notoSans.variable} ${notoSansMono.variable} antialiased`}
       >
-        <div className="flex">
-          <Sidebar />
-          <div className="flex flex-1">{children}</div>
-        </div>
+        {children}
       </body>
     </html>
   );
