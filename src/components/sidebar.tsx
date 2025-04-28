@@ -35,23 +35,12 @@ export default function Sidebar() {
           </Link>
         ))}
       </nav>
-      <div>
-        {/* Auth */}
-        <div className="m-4 flex flex-grow flex-col gap-4">
-          <Link
-            href="/signin"
-            className="border-neutral hover:border-fg-secondary hover:text-fg-tertiary rounded-lg border-2 p-1 text-center font-medium transition-colors duration-300 ease-out"
-          >
-            Sign in
-          </Link>
-          <Link
-            href="/signup"
-            className="bg-button hover:bg-button-hover hover:text-fg-tertiary rounded-lg p-1 text-center font-medium transition-colors duration-300 ease-out"
-          >
-            Sign up
-          </Link>
-        </div>
-      </div>
+      <Link
+        href="/auth/login"
+        className="bg-button hover:bg-button-hover hover:text-fg-tertiary m-4 rounded-lg p-1 text-center font-medium transition-colors duration-300 ease-out"
+      >
+        Login
+      </Link>
     </div>
   );
 }
