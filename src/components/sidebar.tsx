@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import HomeIcon from "@/assets/icons/home";
 
 const navigations = [
@@ -21,7 +23,7 @@ export default function Sidebar() {
       {/* Navigation */}
       <nav className="flex flex-grow flex-col gap-2 p-4">
         {navigations.map((item) => (
-          <a
+          <Link
             key={item.name}
             href={item.href}
             className="text-fg-primary hover:text-fg-tertiary hover:bg-neutral flex items-center rounded-md p-2 font-medium transition-colors duration-300 ease-out"
@@ -30,24 +32,24 @@ export default function Sidebar() {
               <item.icon />
             </span>
             {item.name}
-          </a>
+          </Link>
         ))}
       </nav>
       <div>
         {/* Auth */}
         <div className="m-4 flex flex-grow flex-col gap-4">
-          <a
+          <Link
             href="/signin"
             className="border-neutral hover:border-fg-secondary hover:text-fg-tertiary rounded-lg border-2 p-1 text-center font-medium transition-colors duration-300 ease-out"
           >
             Sign in
-          </a>
-          <a
+          </Link>
+          <Link
             href="/signup"
             className="bg-button hover:bg-button-hover hover:text-fg-tertiary rounded-lg p-1 text-center font-medium transition-colors duration-300 ease-out"
           >
             Sign up
-          </a>
+          </Link>
         </div>
       </div>
     </div>
