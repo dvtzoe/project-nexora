@@ -15,9 +15,9 @@ export default function Sidebar() {
     <div className="bg-bg-secondary text-fg-primary border-neutral flex h-screen w-64 flex-col flex-nowrap overflow-auto border-r">
       {/* Logo */}
       <div className="border-neutral m-4 flex h-16 items-center justify-center border-b-2">
-        <a className="text-fg-primary text-2xl font-bold italic" href="/">
+        <Link className="text-fg-primary text-2xl font-bold italic" href="/">
           Project <span className="text-accent">Nexus</span>
-        </a>
+        </Link>
       </div>
 
       {/* Navigation */}
