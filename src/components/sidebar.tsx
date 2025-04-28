@@ -16,7 +16,7 @@ export default function Sidebar() {
       {/* Logo */}
       <div className="border-neutral m-4 flex h-16 items-center justify-center border-b-2">
         <Link className="text-fg-primary text-2xl font-bold italic" href="/">
-          Project <span className="text-accent">Nexus</span>
+          Project <span className="text-accent">Nexora</span>
         </Link>
       </div>
 
